@@ -1,0 +1,41 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+
+	<title>HTML Test Project</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+
+</head>
+
+<body ng-app="app">
+
+	<div class="container" ng-controller="MainController as vm">
+		<h1>Numbers Only Directive</h1>
+		<div class="row">
+			<div class="col-sm-6">
+				<div class="form-group">
+					<label>Number of decimal places</label>
+					<input type="text" class="form-control" name="numDecimals" ng-model="vm.numDecimals" numbers-only>
+				</div>
+			</div>
+			<div class="col-sm-6">
+				<div class="form-group">
+					<label>Number Input</label>
+					<input type="text" class="form-control" name="myNumber" ng-model="vm.myNumber" numbers-only>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.9/angular.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.18/angular-ui-router.min.js"></script>
+
+	<script src="scripts/app.js"></script>
+	<script src="scripts/main.controller.js"></script>
+	<script src="scripts/numbersOnly.directive.js"></script>
+
+</body>
+</html>
